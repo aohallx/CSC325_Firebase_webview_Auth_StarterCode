@@ -1,0 +1,18 @@
+.root {
+    -fx-background-color: #7FFF00; /* neon green */
+}
+
+.text-field {
+    -fx-pref-width: 150px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 5;
+}
+
+.button {
+    -fx-background-color: #8B4513; /* brown */
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-pref-width: 100px;
+}

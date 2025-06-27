@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc325_firebase_webview_auth.view.SplashController">
+    <children>
+        <ImageView fx:id="splashImage" fitWidth="400" fitHeight="300" />
+        <Text text="Loading..." style="-fx-font-size: 24px; -fx-fill: white;" />
+    </children>
+</StackPane>

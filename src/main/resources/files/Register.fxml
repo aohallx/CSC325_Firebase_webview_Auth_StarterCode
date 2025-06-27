@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" alignment="CENTER" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.csc325_firebase_webview_auth.view.RegisterController">
+    <children>
+        <Label text="Register New User" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <PasswordField fx:id="passwordField" promptText="Password" />
+        <Button text="Register" onAction="#handleRegister" />
+        <Button text="Back" onAction="#handleBack" />
+    </children>
+</VBox>
