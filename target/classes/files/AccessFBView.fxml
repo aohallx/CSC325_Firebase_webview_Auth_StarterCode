@@ -13,6 +13,7 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.csc325_firebase_webview_auth.view.AccessFBView">
 
+
     <children>
         <MenuBar layoutY="1.0" prefHeight="27.0" prefWidth="894.0">
             <menus>
@@ -20,12 +21,14 @@
                     <items>
                         <MenuItem mnemonicParsing="false" text="Register" onAction="#goToRegister"/>
                         <MenuItem mnemonicParsing="false" text="Sign In" onAction="#goToSignin"/>
-                        <MenuItem mnemonicParsing="false" text="Close" onAction="#handleClose"/>
+                        <MenuItem text="Close" onAction="#handleClose" accelerator="Ctrl+Q" />
+                        <MenuItem text="Delete" onAction="#handleDelete" accelerator="Del" />
+
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <MenuItem mnemonicParsing="false" text="Delete" onAction="#handleDelete" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
@@ -39,11 +42,11 @@
             <children>
                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="129.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="profileImageView" fitHeight="150.0" fitWidth="129.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                             <effect>
                                 <InnerShadow>
                                     <color>
-                                        <Color red="0.206" green="0.1679" blue="0.600" />
+                                        <Color red="0.1" green="0.3" blue="0.6" />
                                     </color>
                                 </InnerShadow>
                             </effect>
@@ -51,19 +54,22 @@
                                 <Image url="@profile_empty.png" />
                             </image>
                         </ImageView>
+                        <Button fx:id="uploadButton" layoutX="17.0" layoutY="170.0" text="Upload Picture" onAction="#uploadImage" />
                     </children>
                 </AnchorPane>
                 <VBox prefHeight="535.0" prefWidth="551.0">
                     <children>
-                        <TextArea fx:id="outputField" prefHeight="184.0" prefWidth="514.0" />
-                        <TableView prefHeight="351.0" prefWidth="514.0">
+                        <TableView fx:id="tableView" prefHeight="351.0" prefWidth="514.0">
                             <columns>
-                                <TableColumn prefWidth="75.0" text="C1" />
-                                <TableColumn prefWidth="75.0" text="C2" />
+                                <TableColumn fx:id="nameCol" text="Name" prefWidth="150.0"/>
+                                <TableColumn fx:id="majorCol" text="Major" prefWidth="150.0"/>
+                                <TableColumn fx:id="ageCol" text="Age" prefWidth="100.0"/>
                             </columns>
                         </TableView>
+                        <TextArea fx:id="outputField" prefHeight="184.0" prefWidth="514.0" />
                     </children>
                 </VBox>
+
                 <VBox prefHeight="535.0" prefWidth="241.0" spacing="10.0">
                     <children>
                         <TextField fx:id="nameField" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="272.0" promptText="Name" />
@@ -83,7 +89,6 @@
                                 </Button>
                             </children>
                         </HBox>
-                        <Button fx:id="switchroot" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="25.0" prefWidth="283.0" text="Switch" textAlignment="CENTER" />
                     </children>
                     <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

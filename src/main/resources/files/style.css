@@ -1,18 +1,62 @@
 .root {
-    -fx-background-color: #7FFF00; /* neon green */
+    -fx-background-color: #1a1a1a;
 }
 
-.text-field {
-    -fx-pref-width: 150px;
-    -fx-background-radius: 8;
-    -fx-border-radius: 8;
-    -fx-padding: 5;
+.label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #2a2a2a;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #888;
+    -fx-border-color: #444;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
 }
 
 .button {
-    -fx-background-color: #8B4513; /* brown */
+    -fx-background-color: #333;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-weight: bold;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.button:hover {
+    -fx-background-color: #444;
+}
+
+.text-area {
+    -fx-control-inner-background: #1a1a1a; /* dark background */
+    -fx-text-fill: #e0e0e0; /* light text */
+    -fx-highlight-fill: #444;
+    -fx-highlight-text-fill: white;
+    -fx-border-color: #333;
+}
+
+
+.table-view {
+    -fx-background-color: #1a1a1a;
+    -fx-control-inner-background: #1a1a1a;
+    -fx-table-cell-border-color: #333;
     -fx-text-fill: white;
-    -fx-background-radius: 12;
-    -fx-border-radius: 12;
-    -fx-pref-width: 100px;
+}
+
+.table-column {
+    -fx-text-fill: white;
+}
+
+.menu-bar {
+    -fx-background-color: #222;
+}
+
+.menu, .menu-item {
+    -fx-text-fill: white;
+    -fx-background-color: #222;
+}
+
+.menu:hover, .menu-item:hover {
+    -fx-background-color: #333;
 }
