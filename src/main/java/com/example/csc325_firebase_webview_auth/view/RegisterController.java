@@ -65,7 +65,7 @@ public class RegisterController {
 
     @FXML
     private void handleBack() throws Exception {
-        App.setRoot("/files/AccessFBView.fxml");
+        App.setRoot("files/AccessFBView.fxml");
     }
 
     // === Helper method to show popup alerts ===
